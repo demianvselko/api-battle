@@ -1,0 +1,16 @@
+# Node
+node_modules
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+dist
+coverage
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode
+.DS_Store
