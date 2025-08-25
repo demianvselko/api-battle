@@ -92,29 +92,29 @@ Aplicación de batallas entre personajes obtenidos desde APIs externas (ej: Poke
 - **Fuente:** APIs externas.
 - **Modelo de datos base:**
 
-    ```typescript
-    {
-        id: string,
-        name: string,
-        type: string,
-        element: string,
-        evolution: boolean,
-        fusion: string,
-        image: string,
-        life: number,
-        attack: number,
-        defense: number,
-        ability: string,
-        powerSpecial: string,
-        powerLevel: number,
-        locality: string,
-        stats: {
-            wins: number,
-            losses: number,
-            draws: number
-        }
-    }
-    ```
+  ```typescript
+  {
+      id: string,
+      name: string,
+      type: string,
+      element: string,
+      evolution: boolean,
+      fusion: string,
+      image: string,
+      life: number,
+      attack: number,
+      defense: number,
+      ability: string,
+      powerSpecial: string,
+      powerLevel: number,
+      locality: string,
+      stats: {
+          wins: number,
+          losses: number,
+          draws: number
+      }
+  }
+  ```
 
 - Si los valores no existen en la API, se asignan por defecto, al azar o definidos manualmente.
 
@@ -124,17 +124,17 @@ Aplicación de batallas entre personajes obtenidos desde APIs externas (ej: Poke
 
 - **Modelo:**
 
-    ```typescript
-    {
-        id: string,
-        tipo: "1v1" | "3v3",
-        modo: "casual" | "torneo",
-        participantes: Personaje[],
-        locality: string,
-        resultado: "victoria" | "derrota" | "empate" | "no vale la pena luchar",
-        fecha: Date
-    }
-    ```
+  ```typescript
+  {
+      id: string,
+      tipo: "1v1" | "3v3",
+      modo: "casual" | "torneo",
+      participantes: Personaje[],
+      locality: string,
+      resultado: "victoria" | "derrota" | "empate" | "no vale la pena luchar",
+      fecha: Date
+  }
+  ```
 
 - **Reglas:**
   - Individual: `(attackP1 - defenseP2) - lifeP2`
