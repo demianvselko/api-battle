@@ -1,3 +1,2 @@
-# filepath: c:\Projects\TS\api-battle\.husky\commit-msg
 #!/bin/sh
-npx --no commitlint --edit "$1"
+npx commitlint --edit "$1"
