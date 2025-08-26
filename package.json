@@ -8,28 +8,26 @@
   "scripts": {
     "build": "npm run build -w apps/backend && npm run build -w apps/frontend",
     "dev": "npm run dev -w apps/backend",
-    "lint": "eslint . --ext .ts,.tsx",
+    "lint": "eslint . --ext .ts,.tsx,.js",
     "format": "prettier --write .",
     "test": "npm run test -w apps/backend && npm run test -w apps/frontend",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@types/node": "^22.5.0",
-    "clear": "^0.1.0",
-    "eslint": "^9.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.44.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "husky": "^9.1.7",
-    "jest": "^30.0.5",
+    "husky": "^8.0.0",
     "lint-staged": "^15.5.2",
-    "prettier": "^3.3.3",
-    "typescript": "^5.9.2"
+    "prettier": "^3.3.3"
   },
   "lint-staged": {
     "*.{ts,tsx,js,json,md}": [
-      "eslint --fix",
+      "eslint --fix --config .eslintrc.js",
       "prettier --write"
     ]
   }
