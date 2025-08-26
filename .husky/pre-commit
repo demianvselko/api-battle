@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/husky.sh"
+
+# Corre lint-staged (eslint + prettier según tu package.json)
+npx lint-staged
+
+# Si querés que corra tests en cada commit (opcional, puede ser lento):
+# npm test
